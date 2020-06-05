@@ -1,0 +1,36 @@
+.conteudo {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+.lista {
+    padding-left: 0;
+}
+
+.livro {
+    padding-left: 20px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.descricao {
+    margin-top: 20px;
+}
+
+.reservar {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.mat-row:nth-child(even){
+    background-color:white;
+    }
+
+.mat-row:nth-child(odd){
+    background-color: lightgray;
+    }

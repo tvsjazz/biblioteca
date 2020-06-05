@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row mb-4">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="search" autocomplete="off" placeholder="Search" [(ngModel)]="searchText">
+        </form>
+    </div>
+    <div class="row" style="display: block;">
+        
+            <div class="lista-emprestimo table-responsive mb-5">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let column of colunas">{{column}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let livro of livros | filter:searchText">
+                            <td *ngFor = "let column of colunas">
+                                {{livro[column]}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+    <div class="row" style="display: block">
+        <div class="col-md-6 mb-2">
+            <h2>Lista para empréstimo</h2>
+        </div>
+        
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let column of colunasEmprestimo">{{column}}</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let livro of livros">
+                        <tr *ngIf = "livro.emprestado == false && livro.reservado == true">
+                            <td *ngFor = "let column of colunasEmprestimo">
+                                {{livro[column]}}
+                            </td>
+                            <td><button (click)="emprestarLivro(livro)" class="btn btn-info">Emprestar</button></td>  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
