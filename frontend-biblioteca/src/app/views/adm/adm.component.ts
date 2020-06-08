@@ -42,4 +42,11 @@ export class AdmComponent implements OnInit {
     this.livroService.update(livro._id, livro).subscribe(data => console.log(data));
   }
 
+  devolver(livro: Livro) {
+    livro.reservado = false;
+    livro.emprestado = false;
+    livro.nomeReserva = '';
+    this.livroService.update(livro._id, livro).subscribe(data => console.log(data));
+  }
+
 }

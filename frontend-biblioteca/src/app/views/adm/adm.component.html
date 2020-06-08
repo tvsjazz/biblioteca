@@ -18,6 +18,9 @@
                             <td *ngFor = "let column of colunas">
                                 {{livro[column]}}
                             </td>
+                            <td *ngIf="livro.emprestado === true">
+                                <button class="btn btn-info" (click)="devolver(livro)">Devolução</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
