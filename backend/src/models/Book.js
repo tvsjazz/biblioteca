@@ -22,12 +22,10 @@ const BookSchema = new mongoose.Schema({
         type: String
     },
     reservado: {
-        type: Boolean,
-        required: true
+        type: Boolean
     },
     emprestado: {
-        type: Boolean,
-        required: true
+        type: Boolean
     },
     /* capa: {
         type: String,

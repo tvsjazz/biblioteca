@@ -27,7 +27,8 @@ export class LivroService {
   }
 
   create(livro: Livro): Observable<Livro> {
-    return this.http.post<Livro>(this.baseUrl, livro);
+    const url = `${this.baseUrl}acervo`;
+    return this.http.post<Livro>(url, livro);
   }
 
   read(): Observable<Livro[]> {

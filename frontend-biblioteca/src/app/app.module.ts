@@ -18,10 +18,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AdmComponent } from './views/adm/adm.component';
 import { AcervoComponent } from './views/acervo/acervo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { LivroComponent } from './components/livro/livro.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     LivrosCrudComponent,
     AdmComponent,
     AcervoComponent,
-    LivroComponent
+    LivroComponent,
+    AdicionarLivroComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatSnackBarModule,
     MatTableModule,
     Ng2SearchPipeModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

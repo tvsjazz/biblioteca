@@ -26,7 +26,7 @@ module.exports = {
 
     async store(req, res) {
         // const { filename } = req.file;
-        const { titulo, autor, paginas, descricao, nomeReserva, reservado, emprestado } = req.body;
+        const { titulo, autor, paginas, descricao, nomeReserva = '', reservado = false, emprestado = false } = req.body;
 
         const book = await Book.create({
             titulo,

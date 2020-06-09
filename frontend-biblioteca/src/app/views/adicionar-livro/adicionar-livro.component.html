@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-title>Novo livro</mat-card-title>
+        <form class="form" [formGroup]="cadastrarForm" novalidate>
+            <mat-form-field class="form-element">
+                <input class="formControl" formControlName="titulo" matInput placeholder="Título">
+            </mat-form-field>
+            <mat-form-field class="form-element">
+                <input class="formControl" formControlName="autor" matInput placeholder="Autor">
+            </mat-form-field>
+            <mat-form-field class="form-element">
+                <input class="formControl" formControlName="paginas" matInput placeholder="Páginas">
+            </mat-form-field>
+            <mat-form-field class="form-element">
+                <input class="formControl" formControlName="descricao" matInput placeholder="Descrição">
+            </mat-form-field>
+    
+            <button mat-raised-button type="submit" class="btn btn-info button" (click)="adicionarLivro()">Salvar</button>
+            <button mat-raised-button class="btn btn-info button" routerLink="/adm">Cancelar</button>
+        </form>
+    </mat-card>
+</div>
+
