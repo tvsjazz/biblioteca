@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -9,10 +11,10 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-mongoose.connect('mongodb://localhost:27017/bibliotecaapi', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 requireDir('./src/models');
 
 // Rotas
 app.use('/', require('./src/routes'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
