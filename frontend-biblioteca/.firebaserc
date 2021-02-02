@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "frontend-biblioteca": {
+      "hosting": {
+        "frontend-biblioteca": [
+          "frontend-biblioteca"
+        ]
+      }
+    }
+  }
+}

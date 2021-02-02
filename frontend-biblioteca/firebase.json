@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "frontend-biblioteca",
+      "public": "dist/frontend-biblioteca",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
