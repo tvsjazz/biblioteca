@@ -17,10 +17,11 @@ export class AdmComponent implements OnInit {
   colunasEmprestimo: string[] = ['titulo', 'autor', 'nomeReserva', 'createdAt', 'emprestado'];
   searchText;
 
-  constructor(private livroService: LivroService, private router: Router) { }
+  constructor(private livroService: LivroService,
+              private router: Router) { }
 
   ngOnInit(): void {
-    this.livroService.read().subscribe(livros => {
+    this.livroService.read().subscribe((livros: Livro[]) => {
       this.livros = livros;
     });
   }

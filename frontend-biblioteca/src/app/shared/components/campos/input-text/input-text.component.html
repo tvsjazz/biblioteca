@@ -1,0 +1,15 @@
+<div [formGroup]="formGroup">
+    <mat-form-field class="form-element">
+        <input 
+            class="formControl" 
+            [formControlName]="controlName" 
+            matInput 
+            [placeholder]="titulo">
+        <mat-error *ngIf="validacao.hasError(formControl, 'required')">
+            Campo obrigatório
+        </mat-error>
+        <mat-error *ngIf="validacao.hasError(formControl, 'maxlength')">
+            Campo pode ter no máximo {{ validacao.lengthValidar(formControl, 'maxlength') }} caracteres
+        </mat-error>
+    </mat-form-field>    
+</div>

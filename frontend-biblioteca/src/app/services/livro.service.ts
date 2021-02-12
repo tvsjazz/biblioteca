@@ -10,7 +10,8 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class LivroService {
 
-  baseUrl = 'https://bibliotecaapi.herokuapp.com/';
+  // baseUrl = 'https://bibliotecaapi.herokuapp.com/';
+  baseUrl = 'http://localhost:3000/';
 
   constructor(
     private snackBar: MatSnackBar,

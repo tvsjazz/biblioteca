@@ -25,6 +25,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { CamposModule } from './shared/components/campos/campos.module';
+import { MaterialModule } from './shared/material/material.module';
+import { AlertaComponent } from './shared/components/alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro
     AdmComponent,
     AcervoComponent,
     LivroComponent,
-    AdicionarLivroComponent
+    AdicionarLivroComponent,
+    AlertaComponent
   ],
   imports: [
     BrowserModule,
@@ -53,9 +58,11 @@ import { AdicionarLivroComponent } from './views/adicionar-livro/adicionar-livro
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    CamposModule,
+    MaterialModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
